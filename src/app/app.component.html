@@ -1,0 +1,22 @@
+<fieldset class="app-component">
+  <legend class="title">APP COMPONENT</legend>
+
+  <div class="items-block">
+    <div>
+      <h2>Список покупок</h2>
+    </div>
+
+    <div class="toolbar-block">
+      <input [(ngModel)]="text" placeholder="Название"/>
+      <input type="number" [(ngModel)]="price" placeholder="Цена"/>
+      <button (click)="addItem(text, price)">Добавить</button>
+    </div>
+
+    <div class="item" *ngFor="let item of items">
+      <div>{{item.purchase}}</div>
+      <div>{{item.price}}</div>
+      <input type="checkbox" [(ngModel)]="item.done"/>
+    </div>
+  </div>
+
+</fieldset>
